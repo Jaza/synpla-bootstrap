@@ -4,7 +4,9 @@
       {%- if bootstrap_is_hidden_field(form[fieldname]) and hiddens or
              not bootstrap_is_hidden_field(form[fieldname]) and hiddens != 'only' %}
         {%- for error in errors %}
-          <p class="error">{{error}}</p>
+          <div class="alert alert-danger" role="alert">
+            <p class="help-block">{{error}}</p>
+          </div>
         {%- endfor %}
       {%- endif %}
     {%- endfor %}
